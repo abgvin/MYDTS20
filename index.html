@@ -1,22 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/web fonts/varelaround_regular_macroman/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+  <script>
+    // fungsi initialize untuk mempersiapkan peta
+    function initialize() {
+      var propertiPeta = {
+        center: new google.maps.LatLng(-1.044103, 117.960347),
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+
+  <title>Covid-19 Corona Virus</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" width="150px" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Beranda</a>
+            <a class="nav-item nav-link" href="#">FAQ</a>
+            <a class="nav-item nav-link" href="#">Informasi</a>
+            <a class="nav-item nav-link" href="#">Unduh Aplikasi</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- NED OF NAVBAR -->
+
+  <!-- JUMBOTRON -->
+  <div class="jumbotron">
+    <div class="container">
+
+      <div class="info">
+        <h1 class="display-4 animated zoomIn delay-1s">
+          Kawal informasi seputar <span style="color: #e25856;">COVID-19</span>
+          <br />secara tepat dan akurat.
+        </h1>
+        <p class="lead mt-4 animated zoomIn delay-2s">
+          Situs ini merupakan sumber informasi inisiatif sukarela warganet
+          Indonesia pro-data, <br />terdiri dari praktisi kesehatan, akademisi &
+          profesional.
+        </p>
+
+        <div class="btn-wrappers">
+          <button class="btn btn-primary animated zoomIn delay-3s"><span class="fa fa-facebook"></span>Ikuti
+            dengan
+            Facebook</button>
+          <button class="btn btn-info animated zoomIn delay-4s"><span class="fa fa-twitter"></span>Ikuti
+            dengan Twitter</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END OF JUMBOTRON -->
+
+  <!-- KONTEN -->
+  <section id="konten">
+    <div class="container">
+      <h4 class="mb-4">Jumlah Kasus di Indonesia Saat Ini</h4>
+      <iframe src="https://experience.arcgis.com/experience/57237ebe9c5b4b1caa1b93e79c920338" width="100%"
+        height="750px" frameborder="0"></iframe>
+    </div>
+  </section>
+  <!-- END OF KONTEN -->
+
+  <!-- OUR TEAM -->
+  <section id="our-team" class="mt-4">
+    <div class="container">
+      <h4 class="pt-4 pb-4 text-center">Pengembang Website | Team F6-DTS20</h4>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-2">
+          <figure class="figure">
+            <img src="assets/img/1.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">Hanif Copas</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-2">
+          <figure class="figure">
+            <img src="assets/img/3.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">Miftahul Husna</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-2">
+          <figure class="figure">
+            <img src="assets/img/2.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">Muhamad Apri</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+          <figure class="figure">
+            <img src="assets/img/1.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">Akbar</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-2">
+          <figure class="figure">
+            <img src="assets/img/2.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption text-center">Yoga Yogo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OUR TEAM -->
+
+  <!-- FOOTER -->
+  <footer class="pt-4 text-center">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.png" width="150px" alt="" />
+      </a>
+      <p><code>Kelompok F6_DTS20 Pantau Covid 19<code></p>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <script>
+    function animated() {
+      const element = document.querySelector('.btn')
+      element.classList.add('animated', 'bounceOutLeft')
+    }
+  </script>
+
+
+</body>
+
 </html>

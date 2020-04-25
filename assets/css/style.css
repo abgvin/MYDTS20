@@ -1,0 +1,165 @@
+body {
+  /* font-family: "IBM Plex Sans", sans-serif; */
+  font-family: 'varela_roundregular', Arial, sans-serif;
+  /* min-height: 1000px; */
+  background-color: whtie;
+}
+
+
+
+.nav-item {
+  padding-right: 40px !important;
+  text-align: center;
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+.navbar-nav {
+  padding-left: 36px;
+}
+
+.jumbotron {
+  height: 650px;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/jumbotron.jpg);
+  background-size: cover;
+  background-color: #f1f2f4;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.display-4 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-top: 150px;
+}
+
+.info {
+  position: relative;
+  z-index: 3;
+  margin-top: -20px;
+}
+
+.animasi {
+  margin-top: -350px;
+  position: relative;
+  z-index: 1;
+  /* animation-name: virusanimation; */
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+/* @keyframes virusanimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 10px;
+    top: 20px;
+  }
+
+  50% {
+    left: 70px;
+    top: 20px;
+  }
+
+  75% {
+    left: 30px;
+    top: 10px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+} */
+
+section#konten {
+  margin-top: -120px;
+  position: relative;
+  z-index: 3;
+}
+
+.card-body h3 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.card-body p,
+h5 {
+  text-align: center;
+}
+
+footer {
+  height: 150px;
+  background-color: #f7f7f7;
+}
+
+#map {
+  height: 100%;
+}
+
+#our-team {
+  height: 20%;
+  background-color: #eeeeee;
+}
+
+.figure-img {
+  border-radius: 50% !important;
+}
+
+.signup {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.btn-wrapper a {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .jumbotron,
+  h4,
+  .tabel-kasus {
+    text-align: center;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .map {
+    margin-top: 10px;
+  }
+
+
+}
